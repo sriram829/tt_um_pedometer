@@ -96,7 +96,6 @@ module pedometer_core (
 
             // Debug: always print CS rising events
             if (spi_cs_rising) begin
-                $display("[CORE %0t] CS rising — bit_cnt=%0d", $time, spi_bit_cnt);
             end
             // CS rising edge with 48 bits received — latch frame
             if (spi_cs_rising && spi_bit_cnt == 6'd48) begin
@@ -104,7 +103,6 @@ module pedometer_core (
                 acc_y_lat  <= spi_shift_reg[31:16];
                 acc_z_lat  <= spi_shift_reg[15:0];
                 new_sample <= 1'b1;
-                $display("[CORE %0t] NEW SAMPLE: X=%0d Y=%0d Z=%0d", $time, spi_shift_reg[47:32], spi_shift_reg[31:16], spi_shift_reg[15:0]);
             end
         end
     end
@@ -173,7 +171,6 @@ module pedometer_core (
                 // (ignoring min for simplicity — 95%+ accuracy)
                 mag       <= mx + (md >> 1);
                 mag_valid <= 1'b1;
-                $display("[CORE %0t] MAG=%0d (mx=%0d md=%0d)", $time, mx+(md>>1), mx, md);
             end
         end
     end
@@ -215,7 +212,6 @@ module pedometer_core (
                 tap_sum      <= tap_sum - {3'd0, tap[7]} + {3'd0, mag};
                 mag_smooth   <= (tap_sum - {3'd0, tap[7]} + {3'd0, mag}) >> 3;
                 smooth_valid <= 1'b1;
-                $display("[CORE %0t] SMOOTH=%0d THRESH=%0d", $time, (tap_sum-{3'd0,tap[7]}+{3'd0,mag})>>3, STEP_THRESHOLD);
             end
         end
     end
