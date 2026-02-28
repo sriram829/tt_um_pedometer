@@ -1,19 +1,16 @@
-# Tiny Tapeout project information
 project:
-  title:        "Ultra Low Power Pedometer ASIC"
-  author:       "Dr. Sriram Anbalagan, SASTRA Deemed University"
-  discord:      ""
-  description:  "656nW pedometer using SPI accelerometer input, Alpha-Max Beta-Min magnitude, 8-tap moving average and gait regularity filter"
-  language:     "Verilog"
-  clock_hz:     32768
+  title: "Ultra Low Power Pedometer ASIC"
+  author: "Dr. Sriram Anbalagan, SASTRA Deemed University"
+  discord: ""
+  description: "656nW SPI pedometer with Alpha-Max Beta-Min magnitude and gait filter"
+  language: "Verilog"
+  clock_hz: 32768
   tiles: "1x1"
-  top_module:  "tt_um_pedometer"
+  top_module: "tt_um_pedometer"
   source_files:
     - "tt_um_pedometer.v"
     - "pedometer_core.v"
-
 pinout:
-  # Inputs
   ui[0]: "spi_clk"
   ui[1]: "spi_mosi"
   ui[2]: "spi_cs_n"
@@ -22,7 +19,6 @@ pinout:
   ui[5]: ""
   ui[6]: ""
   ui[7]: ""
-  # Outputs
   uo[0]: "step_count[0]"
   uo[1]: "step_count[1]"
   uo[2]: "step_count[2]"
@@ -31,7 +27,6 @@ pinout:
   uo[5]: "step_count[5]"
   uo[6]: "step_count[6]"
   uo[7]: "step_count[7]"
-  # Bidirectional pins
   uio[0]: "step_detected"
   uio[1]: "artifact_flag"
   uio[2]: ""
@@ -40,6 +35,4 @@ pinout:
   uio[5]: ""
   uio[6]: ""
   uio[7]: ""
-
-# Do not change!
 yaml_version: 6
