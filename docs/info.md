@@ -1,20 +1,13 @@
-<!---
+# Ultra Low Power Pedometer ASIC
 
-This file is used to generate your project datasheet. Please fill in the information below and delete any unused
-sections.
-
-You can also include images in this folder and reference them in the markdown. Each image must be less than
-512 kb in size, and the combined size of all images must be less than 1 MB.
--->
+## Description
+656nW pedometer ASIC using SPI accelerometer input with Alpha-Max Beta-Min magnitude estimation, 8-tap moving average filter and gait regularity filter.
 
 ## How it works
-
-Explain how your project works
+Receives 48-bit SPI frames (16-bit X, Y, Z) from MEMS accelerometer (ADXL345). Computes magnitude using Alpha-Max Beta-Min algorithm. Detects steps using threshold crossing with hysteresis and gait regularity filter.
 
 ## How to test
-
-Explain how to use your project
+Connect ADXL345 accelerometer via SPI. Read step count via uo_out using byte_sel pin.
 
 ## External hardware
-
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+ADXL345 or MPU6050 MEMS accelerometer
