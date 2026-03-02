@@ -210,7 +210,7 @@ module pedometer_core (
 
                 // Running sum: subtract oldest, add newest
                 tap_sum      <= tap_sum - {3'd0, tap[7]} + {3'd0, mag};
-                mag_smooth   <= (tap_sum - {3'd0, tap[7]} + {3'd0, mag}) >> 3;
+                mag_smooth   <= (tap_sum - {3'd0, tap[7]} + {3'd0, mag})[18:3];
                 smooth_valid <= 1'b1;
             end
         end
