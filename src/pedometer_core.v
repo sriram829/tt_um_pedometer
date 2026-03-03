@@ -123,8 +123,6 @@ module pedometer_core (
 
     reg [15:0] mag;   // Computed magnitude
     reg        mag_valid;
-    reg [15:0] ax, ay, az;  // magnitude compute vars
-    reg [15:0] mn, md, mx;  // sort vars
 
     // Pipeline register for magnitude
     reg signed [15:0] ax_r, ay_r, az_r;
@@ -147,6 +145,8 @@ module pedometer_core (
 
             if (ns_r) begin
                 // Compute absolute values
+                reg [15:0] ax, ay, az;
+                reg [15:0] mn, md, mx;
 
                 ax = abs16(ax_r);
                 ay = abs16(ay_r);
@@ -210,7 +210,7 @@ module pedometer_core (
 
                 // Running sum: subtract oldest, add newest
                 tap_sum      <= tap_sum - {3'd0, tap[7]} + {3'd0, mag};
-                mag_smooth   <= tap_sum[18:3];
+                mag_smooth   <= (tap_sum - {3'd0, tap[7]} + {3'd0, mag}) >> 3;
                 smooth_valid <= 1'b1;
             end
         end
