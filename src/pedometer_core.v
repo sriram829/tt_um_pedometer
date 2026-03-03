@@ -146,7 +146,9 @@ module pedometer_core (
             if (ns_r) begin
                 // Compute absolute values
                 reg [15:0] ax, ay, az;
+                /* verilator lint_off UNUSEDSIGNAL */
                 reg [15:0] mn, md, mx;
+                /* verilator lint_on UNUSEDSIGNAL */
 
                 ax = abs16(ax_r);
                 ay = abs16(ay_r);
@@ -210,7 +212,9 @@ module pedometer_core (
 
                 // Running sum: subtract oldest, add newest
                 tap_sum      <= tap_sum - {3'd0, tap[7]} + {3'd0, mag};
+                /* verilator lint_off WIDTHTRUNC */
                 mag_smooth   <= (tap_sum - {3'd0, tap[7]} + {3'd0, mag}) >> 3;
+                /* verilator lint_on WIDTHTRUNC */
                 smooth_valid <= 1'b1;
             end
         end
@@ -240,7 +244,7 @@ module pedometer_core (
     reg        above_thresh;    // Current state: above threshold?
     reg        prev_above;      // Previous state
     reg [16:0] interval_cnt;    // Counts clocks since last valid step
-    reg [16:0] last_interval;   // Stores last detected interval
+    /* verilator lint_off UNUSEDSIGNAL */ reg [16:0] last_interval; /* verilator lint_on UNUSEDSIGNAL */   // Stores last detected interval
 
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
