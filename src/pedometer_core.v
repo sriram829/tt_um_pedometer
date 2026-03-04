@@ -1,3 +1,4 @@
+`default_nettype wire
 // ============================================================
 // Module      : pedometer_core
 // Description : Ultra Low Power Pedometer Core
@@ -127,6 +128,10 @@ module pedometer_core (
     // Pipeline register for magnitude
     reg signed [15:0] ax_r, ay_r, az_r;
     reg                ns_r;
+    reg [15:0] ax, ay, az;
+    /* verilator lint_off UNUSEDSIGNAL */
+    reg [15:0] mn, md, mx;
+    /* verilator lint_on UNUSEDSIGNAL */
 
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
@@ -145,9 +150,7 @@ module pedometer_core (
 
             if (ns_r) begin
                 // Compute absolute values
-                reg [15:0] ax, ay, az;
                 /* verilator lint_off UNUSEDSIGNAL */
-                reg [15:0] mn, md, mx;
                 /* verilator lint_on UNUSEDSIGNAL */
 
                 ax = abs16(ax_r);
