@@ -1,12 +1,11 @@
-name: FPGA Lint Check
+name: fpga
 
 on:
   push:
     paths:
       - 'fpga/**'
+      - 'src/**'
   pull_request:
-    paths:
-      - 'fpga/**'
 
 jobs:
   lint:
@@ -18,19 +17,23 @@ jobs:
       - name: Install Verilator
         run: sudo apt-get install -y verilator
 
-      - name: Lint top_pedometer
+      - name: Lint pedometer core
         run: |
           verilator --lint-only -Wall \
             --bbox-unsup \
+            --bbox-sys \
+            -Wno-UNUSED \
+            -Wno-UNDRIVEN \
+            -Wno-DECLFILENAME \
             fpga/src/pedometer_core.v \
             fpga/src/tt_um_pedometer.v \
-            fpga/src/top_pedometer.v \
-            2>&1 | grep -v "UNUSED\|UNDRIVEN\|DECLFILENAME"
-          echo "Lint complete!"
+            fpga/src/top_pedometer.v
+          echo "✅ Lint passed!"
 
-      - name: Check files exist
+      - name: Verify all files present
         run: |
-          echo "Checking FPGA files..."
+          echo "📁 FPGA Source files:"
           ls -la fpga/src/
+          echo "📁 Constraint files:"
           ls -la fpga/constraints/
-          echo "All files present!"
+          echo "✅ All files present!"
