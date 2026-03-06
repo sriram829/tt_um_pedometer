@@ -40,3 +40,8 @@ The GitHub action will automatically build the ASIC files using [LibreLane](http
   - Mastodon [#tinytapeout](https://chaos.social/tags/tinytapeout) [@matthewvenn](https://chaos.social/@matthewvenn)
   - X (formerly Twitter) [#tinytapeout](https://twitter.com/hashtag/tinytapeout) [@tinytapeout](https://twitter.com/tinytapeout)
   - Bluesky [@tinytapeout.com](https://bsky.app/profile/tinytapeout.com)
+
+## FPGA Implementation
+![FPGA](https://github.com/sriram829/tt_um_pedometer/workflows/FPGA%20Lint%20Check/badge.svg)
+
+DE10-Lite MAX10 implementation — see [fpga/README.md](fpga/README.md)
