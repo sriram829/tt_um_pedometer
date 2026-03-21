@@ -1,0 +1,22 @@
+MANUAL VERIFICATION — tt_um_pedometer
+SASTRA University SEEE
+Guide: Dr. T.N. Prabakar, Associate Professor
+Researcher: Dr. Sriram Anbalagan
+Date: March 2026
+---------------------------------------
+RTL to GDS Flow Results:
+STAGE 1  RTL Design    PASS
+STAGE 2  RTL Syntax    PASS 0 errors
+STAGE 3  Simulation    PASS TESTS=1 PASS=1
+STAGE 4  Config        PASS all correct
+STAGE 5  Synthesis     PASS 1506 cells 0 problems
+STAGE 6  Floorplan     PASS via CI gds 27
+STAGE 7  Placement     PASS 76.2 percent util
+STAGE 8  CTS           PASS 32768 Hz
+STAGE 9  Routing       PASS 100 percent
+STAGE 10 DRC           PASS 0 violations
+STAGE 11 LVS           PASS circuits match
+STAGE 12 GDS Output    PASS 34255 um2
+---------------------------------------
+ALL 12 STAGES PASSED
+STATUS: READY FOR TAPEOUT SKY26a

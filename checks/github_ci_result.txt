@@ -1,0 +1,19 @@
+=====================================
+GITHUB CI CHECK — tt_um_pedometer
+=====================================
+Institution : SASTRA University, SEEE
+Guide       : Dr. T.N. Prabakar
+Researcher  : Dr. Sriram Anbalagan
+Date        : March 2026
+
+Total Runs  : 81 workflow runs
+Latest Run  : commit 908cee3 (Mar 6)
+
+docs  #27 → ✅ PASS (49s)
+gds   #27 → ✅ PASS (10m 36s)
+test  #27 → ✅ PASS (30s)
+
+ALL WORKFLOWS = GREEN ✅
+
+RESULT: ✅ PASS
+=====================================

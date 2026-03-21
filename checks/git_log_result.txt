@@ -1,0 +1,20 @@
+=====================================
+GIT LOG CHECK — tt_um_pedometer
+=====================================
+Institution : SASTRA University, SEEE
+Guide       : Dr. T.N. Prabakar
+Researcher  : Dr. Sriram Anbalagan
+Date        : March 2026
+
+Latest Commits:
+908cee3 Fix workflow name to match badge URL
+67a901b Add FPGA badge to README
+7784339 Add GitHub Actions FPGA lint workflow
+ea14c41 Add DE10-Lite FPGA SPI pedometer
+534b746 Add RTL schematic fixes
+
+Branch : main ✅
+Remote : origin/main synced ✅
+
+RESULT: ✅ PASS
+=====================================

@@ -1,0 +1,17 @@
+=====================================
+info.yaml CHECK — tt_um_pedometer
+=====================================
+Institution : SASTRA University, SEEE
+Guide       : Dr. T.N. Prabakar
+Researcher  : Dr. Sriram Anbalagan
+Date        : March 2026
+
+top_module  : tt_um_pedometer  ✅
+clock_hz    : 32768 Hz         ✅
+tiles       : 1x2              ✅
+source_files: 2 files          ✅
+pinout      : all pins mapped  ✅
+yaml_version: 6                ✅
+
+RESULT: ✅ PASS
+=====================================

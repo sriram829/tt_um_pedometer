@@ -26,7 +26,7 @@ async def send_spi_frame(dut, x_val, y_val, z_val):
 @cocotb.test()
 async def test_project(dut):
     dut._log.info("Start Pedometer Test")
-    clock = Clock(dut.clk, 30517, unit="ns")
+    clock = Clock(dut.clk, 30517, units="ns")
     cocotb.start_soon(clock.start())
     dut.ena.value = 1
     dut.ui_in.value = 0b00000100

@@ -1,0 +1,16 @@
+=====================================
+SIMULATION RESULT — tt_um_pedometer
+=====================================
+Institution : SASTRA University, SEEE
+Guide       : Dr. T.N. Prabakar
+Researcher  : Dr. Sriram Anbalagan
+Date        : March 2026
+Tool        : cocotb + Icarus Verilog v13.0
+
+RESULT: TESTS=1 PASS=1 FAIL=0 SKIP=0 ✅
+
+Details:
+  Reset released  : 427,238 ns
+  All steps passed: 374,504,624 ns
+  Real time       : 0.85 seconds
+=====================================

@@ -1,0 +1,18 @@
+=====================================
+CONFIG.JSON CHECK — tt_um_pedometer
+=====================================
+Institution : SASTRA University, SEEE
+Guide       : Dr. T.N. Prabakar
+Researcher  : Dr. Sriram Anbalagan
+Date        : March 2026
+
+CLOCK_PORT    : clk          ✅
+CLOCK_PERIOD  : 30517 ns     ✅ (32.768 kHz)
+PL_DENSITY    : 65% target   ✅ (76.2% achieved)
+FP_SIZING     : absolute     ✅ (TT tile)
+RUN_CTS       : 1            ✅ (CTS enabled)
+HOLD_MARGIN   : 0.1 ns       ✅
+CONGESTION    : allowed      ✅
+
+RESULT: ✅ PASS
+=====================================

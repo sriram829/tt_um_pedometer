@@ -1,0 +1,32 @@
+=====================================
+SYNTHESIS RESULT — tt_um_pedometer
+=====================================
+Institution : SASTRA University, SEEE
+Guide       : Dr. T.N. Prabakar
+Researcher  : Dr. Sriram Anbalagan
+Date        : March 2026
+Tool        : Yosys 0.43+34
+
+Top Module  : tt_um_pedometer  ✅
+Sub Module  : pedometer_core   ✅
+
+CELL STATISTICS:
+  Total Cells    : 1,506       ✅
+  Flip-Flops     : 359         ✅
+  Logic Gates    : 566         ✅
+  Multiplexers   : 219         ✅
+  XOR/XNOR       : 237         ✅
+
+WIRE STATISTICS:
+  Total Wires    : 1,128       ✅
+  Wire Bits      : 1,636       ✅
+  Public Wires   : 55          ✅
+
+QUALITY:
+  Problems found : 0           ✅
+  CPU Time       : 0.47s       ✅
+  Memory Peak    : 28.95 MB    ✅
+  Netlist saved  : synthesized_netlist.v ✅
+
+RESULT: ✅ PASS — SYNTHESIS SUCCESSFUL
+=====================================
